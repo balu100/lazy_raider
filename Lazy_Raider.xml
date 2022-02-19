@@ -1,0 +1,185 @@
+<Ui>
+    <Frame name="LazyRaider_MainFrame" parent="UIParent" hidden="true">
+        <Anchors>
+            <Anchor point="TOPRIGHT">
+                <Offset>
+                    <AbsDimension x="-170" y="-120" />
+                </Offset>
+            </Anchor>
+        </Anchors>
+        <Size>
+            <AbsDimension x="200" y="260" />
+        </Size>
+        <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background"
+                  edgeFile="Interface\Tooltips\UI-Tooltip-Border"
+                  tile="true">
+            <EdgeSize>
+                <AbsVAlue val="16" />
+            </EdgeSize>
+            <TileSize>
+                <AbsValue val="16" />
+            </TileSize>
+            <BackgroundInsets>
+                <AbsInset left="4" right="3" top="4" bottom="3" />
+            </BackgroundInsets>
+            <Color r="0.2" g="0.2" b="0.2" a="1" />
+        </Backdrop>
+        <Frames>
+            <CheckButton name="$parent_AcceptInvite" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="15" y="-40"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_AcceptInvite_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <CheckButton name="$parent_AcceptSummon" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="15" y="-70"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_AcceptSummon_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <CheckButton name="$parent_LazyAcceptSummon" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="35" y="-90"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_LazyAcceptSummon_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <CheckButton name="$parent_AcceptRC" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="15" y="-120"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_AcceptRC_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+            <CheckButton name="$parent_LazyAcceptRC" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="35" y="-140"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_LazyAcceptRC_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <CheckButton name="$parent_AcceptRes" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="15" y="-170"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_AcceptRes_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+
+            <CheckButton name="$parent_AcceptResNotCombat" inherits="ChatConfigCheckButtonTemplate" checked="false">
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset>
+                            <AbsDimension x="35" y="-190"></AbsDimension>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>
+                        LazyRaider_AcceptResNotCombat_OnClick()
+                    </OnClick>
+                </Scripts>
+            </CheckButton>
+        </Frames>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString name="$parent_LazyRaiderHeader"
+                            inherits="SystemFont_Large"
+                            text="Lazy Raider"
+                            justifyV="TOP"
+                            justifyH="RIGHT">
+                    <Anchors>
+                        <Anchor point="TOP">
+                            <Offset>
+                                <AbsDimension x="0" y="-13" />
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                    <Color r="0.47" g="0.67" b="1" a="1" />
+                </FontString>
+
+                <FontString name="$parent_RCstatus"
+                            inherits="GameFontNormal"
+                            text="RC status: "
+                            justifyV="TOP"
+                            justifyH="RIGHT">
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="78" y="-225" />
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                    <Color r="1" g="1" b="1" a="1" />
+                </FontString>
+
+                <FontString name="$parent_RCstatusText"
+                            inherits="GameFontNormal"
+                            text=""
+                            justifyV="TOP"
+                            justifyH="RIGHT">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="$parent_RCstatus">
+                            <Offset>
+                                <AbsDimension x="59" y="0" />
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        
+        <Scripts>
+            <OnLoad>
+                LazyRaider_OnLoad()
+            </OnLoad>
+        </Scripts>
+    </Frame>
+</Ui>

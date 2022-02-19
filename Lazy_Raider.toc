@@ -1,0 +1,9 @@
+## Interface: 90105
+## Title: LazyRaider
+## Notes: set of helpful utils for slackers
+## Author: balu100
+## SavedVariablesPerCharacter: LazyRaiderDB
+
+Embeds.xml
+Lazy_Raider.lua
+Lazy_Raider.xml
